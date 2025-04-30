@@ -12,6 +12,7 @@
  * @type {JestConfig}
  */
 const config = {
+  preset: 'ts-jest',
   /**
    * Defines the test environment to be used for testing.
    */
@@ -35,43 +36,21 @@ const config = {
   /**
    * An array of file extensions your modules use.
    */
-  moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'node'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 
   /**
    * Transform files with ts-jest
    */
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: 'tsconfig.json'
+    }]
   },
 
   /**
    * Setup files to run before tests
    */
-  setupFiles: ['<rootDir>/tests/setup.js'],
-
-  /**
-   * A set of global variables that need to be available in all test environments.
-   */
-  globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.json'
-    },
-    chrome: {
-      runtime: {
-        sendMessage: jest.fn(),
-        onMessage: {
-          addListener: jest.fn()
-        }
-      },
-      storage: {
-        local: {
-          get: jest.fn(),
-          set: jest.fn()
-        }
-      }
-    }
-  },
+  setupFiles: ['<rootDir>/tests/setup.ts'],
 
   /**
    * Module name mapper for handling path aliases

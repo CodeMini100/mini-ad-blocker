@@ -3,6 +3,29 @@
  * @description Setup file for Jest tests
  */
 
+import { jest } from '@jest/globals';
+
+declare global {
+  namespace NodeJS {
+    interface Global {
+      chrome: {
+        runtime: {
+          sendMessage: jest.Mock;
+          onMessage: {
+            addListener: jest.Mock;
+          };
+        };
+        storage: {
+          local: {
+            get: jest.Mock;
+            set: jest.Mock;
+          };
+        };
+      };
+    }
+  }
+}
+
 // Mock chrome API
 global.chrome = {
   runtime: {
