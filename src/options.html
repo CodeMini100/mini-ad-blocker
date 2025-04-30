@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Description:
+      Settings page for editing the custom block-list.
+    Purpose:
+      Provide users with a UI to view, add, and remove items in their custom block-list.
+    Best Practices:
+      1. Semantic HTML structure
+      2. Responsive design
+      3. Separate concerns (HTML, CSS, JavaScript)
+      4. Accessibility considerations
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Block-List Settings</title>
+  <!-- Link your external CSS file for styling -->
+  <link rel="stylesheet" href="./options.css" />
+  <!-- Defer loading of external JS file to optimize performance -->
+  <script src="./options.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Custom Block-List Settings</h1>
+  </header>
+
+  <main>
+    <section>
+      <!-- Instructions or informational text for the user -->
+      <p>Manage your custom block-list below. Items added here will be blocked in the extension.</p>
+
+      <!-- Display the current block-list items -->
+      <ul id="blocklist-display">
+        <!-- Block-list items will be dynamically rendered here -->
+      </ul>
+
+      <!-- Add a new item to the block-list -->
+      <div>
+        <label for="new-block-item">New Block-List Item:</label>
+        <input type="text" id="new-block-item" aria-label="Enter item to block" />
+        <button id="add-item-btn">Add</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 YourCompany</p>
+  </footer>
+</body>
+</html>

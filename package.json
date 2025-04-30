@@ -1,0 +1,35 @@
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "description": "A production-ready skeleton with ESLint, Prettier, and Vite configured for building and linting.",
+  "main": "index.js",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite dev",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/username/my-project.git"
+  },
+  "keywords": [],
+  "author": "Your Name <you@example.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/username/my-project/issues"
+  },
+  "homepage": "https://github.com/username/my-project#readme",
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.27.0",
+    "@types/jest": "^29.5.14",
+    "eslint": "^8.50.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.3.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}

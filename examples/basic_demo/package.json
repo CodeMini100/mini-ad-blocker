@@ -1,0 +1,15 @@
+{
+  "name": "basic_demo",
+  "version": "1.0.0",
+  "description": "A production-ready demonstration of an Express-based Node.js application.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

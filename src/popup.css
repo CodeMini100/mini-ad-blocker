@@ -1,0 +1,100 @@
+/**
+ * popup.css
+ * Description: Styles for the popup UI.
+ *
+ * This file includes basic resets, popup container styling,
+ * transitions, and close button styling to create a
+ * production-ready skeleton for a popup component.
+ */
+
+/* Basic reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global text settings */
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+/* Popup overlay covering the full viewport */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* Toggle display to show/hide popup */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Popup container with smooth transition */
+.popup-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Active state for the popup (when visible) */
+.popup-overlay.active .popup-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Close button styling */
+.popup-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+/* Title section */
+.popup-title {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Main content area */
+.popup-content {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Action buttons container */
+.popup-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Generic button styling for actions */
+.popup-button {
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup-button:hover {
+  background-color: #0056b3;
+}
